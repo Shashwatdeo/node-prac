@@ -15,6 +15,10 @@ const getUserById=async(req,res)=>{
     if(!user){
         return res.status(404).json({message:"user not found"})
         }
+     res.status(200).json({
+        message: "user found",
+        user
+    })
 }
 const createUser=async (req, res) => {
     const newUser = new userModel(req.body);
